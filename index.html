@@ -1,744 +1,1735 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sporting Marketplace — Propuesta para Sellers 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root {
-  --g:   #5ea832;
-  --g2:  #4a8a26;
-  --g3:  #3a6e1c;
-  --glo: rgba(94,168,50,.10);
-  --glb: rgba(94,168,50,.22);
-  --w:   #ffffff;
-  --k:   #0d0f0d;
-  --k2:  #161a15;
-  --k3:  #1e2420;
-  --t3:  #6b7d66;
-  --t4:  #adbba7;
-  --s1:  #f4f7f1;
-  --s2:  #e6ede0;
-  --t1:  #1a221a;
-  --t2:  #3d4e3a;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sporting Marketplace — Propuesta para Sellers 2026</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --g: #5ea832;
+        --g2: #4a8a26;
+        --g3: #3a6e1c;
+        --glo: rgba(94, 168, 50, 0.1);
+        --glb: rgba(94, 168, 50, 0.22);
+        --w: #ffffff;
+        --k: #0d0f0d;
+        --k2: #161a15;
+        --k3: #1e2420;
+        --t3: #6b7d66;
+        --t4: #adbba7;
+        --s1: #f4f7f1;
+        --s2: #e6ede0;
+        --t1: #1a221a;
+        --t2: #3d4e3a;
+      }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Barlow',sans-serif;background:var(--k);color:var(--w);overflow-x:hidden}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Barlow", sans-serif;
+        background: var(--k);
+        color: var(--w);
+        overflow-x: hidden;
+      }
 
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:999;
-  height:56px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 48px;
-  background:rgba(13,15,13,.95);
-  border-bottom:1px solid rgba(94,168,50,.12);
-  backdrop-filter:blur(20px);
-}
-.logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;color:var(--w)}
-.logo span{color:var(--g)}
-.nav-cta{
-  background:var(--g);color:var(--w);border:none;cursor:pointer;
-  font-family:'Barlow',sans-serif;font-size:11px;font-weight:700;
-  letter-spacing:.1em;text-transform:uppercase;
-  padding:9px 22px;border-radius:3px;text-decoration:none;
-  transition:background .18s;
-}
-.nav-cta:hover{background:var(--g2)}
+      /* ── NAV ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 48px;
+        background: rgba(13, 15, 13, 0.95);
+        border-bottom: 1px solid rgba(94, 168, 50, 0.12);
+        backdrop-filter: blur(20px);
+      }
+      .logo {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--w);
+      }
+      .logo span {
+        color: var(--g);
+      }
+      .nav-cta {
+        background: var(--g);
+        color: var(--w);
+        border: none;
+        cursor: pointer;
+        font-family: "Barlow", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 9px 22px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: background 0.18s;
+      }
+      .nav-cta:hover {
+        background: var(--g2);
+      }
 
-/* ── SCROLL REVEAL ── */
-.r{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
-.r.v{opacity:1;transform:none}
+      /* ── SCROLL REVEAL ── */
+      .r {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+      .r.v {
+        opacity: 1;
+        transform: none;
+      }
 
-/* ── SECTIONS ── */
-section{
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  padding:90px 48px 80px;position:relative;
-}
-.inner{width:100%;max-width:1060px}
+      /* ── SECTIONS ── */
+      section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 48px 80px;
+        position: relative;
+      }
+      .inner {
+        width: 100%;
+        max-width: 1060px;
+      }
 
-.chip{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--g);margin-bottom:16px;
-}
-.chip::before{content:'';display:block;width:22px;height:2px;background:var(--g);flex-shrink:0}
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--g);
+        margin-bottom: 16px;
+      }
+      .chip::before {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--g);
+        flex-shrink: 0;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    1 · HERO
 ───────────────────────────────── */
-#s1{background:var(--k);overflow:hidden}
-#s1::before{
-  content:'';position:absolute;top:-20%;right:-8%;
-  width:80vw;height:80vw;max-width:960px;max-height:960px;
-  background:radial-gradient(ellipse,rgba(94,168,50,.10) 0%,transparent 58%);
-  pointer-events:none;
-}
-#s1::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent,var(--g),transparent);
-}
+      #s1 {
+        background: var(--k);
+        overflow: hidden;
+      }
+      #s1::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -8%;
+        width: 80vw;
+        height: 80vw;
+        max-width: 960px;
+        max-height: 960px;
+        background: radial-gradient(
+          ellipse,
+          rgba(94, 168, 50, 0.1) 0%,
+          transparent 58%
+        );
+        pointer-events: none;
+      }
+      #s1::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--g), transparent);
+      }
 
-.eyebrow{
-  font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--g);display:flex;align-items:center;gap:10px;margin-bottom:28px;
-}
-.eyebrow::before{content:'';width:18px;height:2px;background:var(--g)}
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--g);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 18px;
+        height: 2px;
+        background: var(--g);
+      }
 
-.hero-h1{
-  font-family:'Barlow Condensed',sans-serif;font-weight:900;
-  font-size:clamp(60px,9.5vw,118px);
-  text-transform:uppercase;letter-spacing:-.02em;line-height:.93;
-  margin-bottom:34px;
-}
-.hero-h1 span{
-  display:block;color:transparent;
-  -webkit-text-stroke:2px var(--g);
-}
+      .hero-h1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 900;
+        font-size: clamp(60px, 9.5vw, 118px);
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        line-height: 0.93;
+        margin-bottom: 34px;
+      }
+      .hero-h1 span {
+        display: block;
+        color: transparent;
+        -webkit-text-stroke: 2px var(--g);
+      }
 
-.hero-claim{
-  font-size:19px;color:var(--t3);font-weight:400;line-height:1.70;
-  max-width:500px;margin-bottom:44px;
-  border-left:3px solid var(--g);padding-left:22px;
-}
-.hero-claim strong{color:var(--w);font-weight:600}
+      .hero-claim {
+        font-size: 19px;
+        color: var(--t3);
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 500px;
+        margin-bottom: 44px;
+        border-left: 3px solid var(--g);
+        padding-left: 22px;
+      }
+      .hero-claim strong {
+        color: var(--w);
+        font-weight: 600;
+      }
 
-.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:56px}
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 56px;
+      }
 
-.btn-p{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--g);color:var(--w);text-decoration:none;
-  font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  padding:14px 30px;border-radius:3px;transition:background .18s,transform .15s;
-}
-.btn-p:hover{background:var(--g2);transform:translateY(-1px)}
+      .btn-p {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--g);
+        color: var(--w);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 14px 30px;
+        border-radius: 3px;
+        transition:
+          background 0.18s,
+          transform 0.15s;
+      }
+      .btn-p:hover {
+        background: var(--g2);
+        transform: translateY(-1px);
+      }
 
-/* Stats */
-.stats{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;
-}
-.stat{padding:26px 24px;border-right:1px solid rgba(255,255,255,.07)}
-.stat:last-child{border-right:none}
-.stat-n{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,3.5vw,46px);
-  font-weight:900;line-height:1;letter-spacing:-.02em;margin-bottom:4px;
-}
-.stat-n em{color:var(--g);font-style:normal}
-.stat-l{font-size:12px;color:var(--t4);line-height:1.5}
+      /* Stats */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .stat {
+        padding: 26px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .stat:last-child {
+        border-right: none;
+      }
+      .stat-n {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(30px, 3.5vw, 46px);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+      }
+      .stat-n em {
+        color: var(--g);
+        font-style: normal;
+      }
+      .stat-l {
+        font-size: 12px;
+        color: var(--t4);
+        line-height: 1.5;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    2 · CÍRCULO VIRTUOSO
 ───────────────────────────────── */
-#s2{background:var(--k2)}
-.cv-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.cv-text h2{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
-  margin-bottom:18px;
-}
-.cv-text p{font-size:15px;color:var(--t4);line-height:1.80;max-width:400px}
-.cv-text p strong{color:var(--w)}
+      #s2 {
+        background: var(--k2);
+      }
+      .cv-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: center;
+      }
+      .cv-text h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        margin-bottom: 18px;
+      }
+      .cv-text p {
+        font-size: 15px;
+        color: var(--t4);
+        line-height: 1.8;
+        max-width: 400px;
+      }
+      .cv-text p strong {
+        color: var(--w);
+      }
 
-/* SVG Circle */
-.cv-graphic{position:relative;width:100%;max-width:420px;margin:0 auto}
+      /* SVG Circle */
+      .cv-graphic {
+        position: relative;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    3 · POR QUÉ SPORTING
 ───────────────────────────────── */
-#s3{background:var(--k3)}
-.pq-header{display:flex;gap:64px;align-items:flex-end;margin-bottom:48px}
-.pq-header h2{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
-  flex:0 0 auto;max-width:400px;
-}
-.pq-header p{font-size:15px;color:var(--t4);line-height:1.75}
-.pq-header p strong{color:var(--w)}
+      #s3 {
+        background: var(--k3);
+      }
+      .pq-header {
+        display: flex;
+        gap: 64px;
+        align-items: flex-end;
+        margin-bottom: 48px;
+      }
+      .pq-header h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        flex: 0 0 auto;
+        max-width: 400px;
+      }
+      .pq-header p {
+        font-size: 15px;
+        color: var(--t4);
+        line-height: 1.75;
+      }
+      .pq-header p strong {
+        color: var(--w);
+      }
 
-.pitch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.pitch-card{
-  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
-  border-radius:10px;padding:26px 22px;transition:border-color .2s,transform .2s;
-  display:flex;flex-direction:column;gap:10px;
-}
-.pitch-card:hover{border-color:rgba(94,168,50,.35);transform:translateY(-3px)}
-.pitch-ico{font-size:26px;line-height:1}
-.pitch-title{
-  font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--w);
-}
-.pitch-body{font-size:13px;color:var(--t4);line-height:1.65}
+      .pitch-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .pitch-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 26px 22px;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .pitch-card:hover {
+        border-color: rgba(94, 168, 50, 0.35);
+        transform: translateY(-3px);
+      }
+      .pitch-ico {
+        font-size: 26px;
+        line-height: 1;
+      }
+      .pitch-title {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--w);
+      }
+      .pitch-body {
+        font-size: 13px;
+        color: var(--t4);
+        line-height: 1.65;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    4 · NUESTRO ENFOQUE
 ───────────────────────────────── */
-#s4{background:var(--s1)}
-#s4 .chip{color:var(--g2)}
-#s4 .chip::before{background:var(--g2)}
-#s4 h2{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;color:var(--t1);
-  margin-bottom:40px;max-width:580px;
-}
+      #s4 {
+        background: var(--s1);
+      }
+      #s4 .chip {
+        color: var(--g2);
+      }
+      #s4 .chip::before {
+        background: var(--g2);
+      }
+      #s4 h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        color: var(--t1);
+        margin-bottom: 40px;
+        max-width: 580px;
+      }
 
-.enfoque-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--s2);border-radius:12px;overflow:hidden}
-.enf-cell{
-  background:var(--w);padding:28px 26px;display:flex;gap:18px;align-items:flex-start;
-  transition:background .18s;
-}
-.enf-cell:hover{background:#fafcf8}
-.enf-num{
-  font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;
-  color:var(--s2);line-height:1;flex-shrink:0;width:44px;
-}
-.enf-label{font-size:16px;font-weight:700;color:var(--t1);margin-bottom:4px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em}
-.enf-desc{font-size:13px;color:var(--t3);line-height:1.65}
+      .enfoque-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        background: var(--s2);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .enf-cell {
+        background: var(--w);
+        padding: 28px 26px;
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        transition: background 0.18s;
+      }
+      .enf-cell:hover {
+        background: #fafcf8;
+      }
+      .enf-num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--s2);
+        line-height: 1;
+        flex-shrink: 0;
+        width: 44px;
+      }
+      .enf-label {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--t1);
+        margin-bottom: 4px;
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .enf-desc {
+        font-size: 13px;
+        color: var(--t3);
+        line-height: 1.65;
+      }
 
-.quote-bar{
-  margin-top:36px;padding:22px 28px;
-  border-left:3px solid var(--g);background:rgba(94,168,50,.07);border-radius:0 8px 8px 0;
-}
-.quote-bar p{font-size:17px;color:var(--t1);font-weight:600;line-height:1.55;font-style:italic}
+      .quote-bar {
+        margin-top: 36px;
+        padding: 22px 28px;
+        border-left: 3px solid var(--g);
+        background: rgba(94, 168, 50, 0.07);
+        border-radius: 0 8px 8px 0;
+      }
+      .quote-bar p {
+        font-size: 17px;
+        color: var(--t1);
+        font-weight: 600;
+        line-height: 1.55;
+        font-style: italic;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    5 · ROLES
 ───────────────────────────────── */
-#s5{background:var(--k)}
-#s5 h2{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
-  margin-bottom:8px;
-}
-#s5 .sub{font-size:15px;color:var(--t4);margin-bottom:36px}
+      #s5 {
+        background: var(--k);
+      }
+      #s5 h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        margin-bottom: 8px;
+      }
+      #s5 .sub {
+        font-size: 15px;
+        color: var(--t4);
+        margin-bottom: 36px;
+      }
 
-.roles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.role-b{border-radius:12px;padding:34px 30px}
-.role-b.sp{background:var(--k2);border:1px solid rgba(255,255,255,.08)}
-.role-b.se{background:var(--g)}
-.rh{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
-.rh-s{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:26px}
-.role-b.sp .rh{color:var(--g)}
-.role-b.se .rh{color:rgba(255,255,255,.95)}
-.ri{
-  display:flex;align-items:flex-start;gap:10px;
-  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);
-  font-size:14px;line-height:1.5;
-}
-.ri:last-child{border-bottom:none}
-.role-b.sp .ri{color:#c8d8c3}
-.role-b.se .ri{color:rgba(255,255,255,.9);border-bottom-color:rgba(255,255,255,.15)}
-.ri::before{content:'→';flex-shrink:0;font-size:12px;margin-top:2px}
-.role-b.sp .ri::before{color:var(--g)}
-.role-b.se .ri::before{color:rgba(255,255,255,.5)}
+      .roles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .role-b {
+        border-radius: 12px;
+        padding: 34px 30px;
+      }
+      .role-b.sp {
+        background: var(--k2);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .role-b.se {
+        background: var(--g);
+      }
+      .rh {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .rh-s {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.55;
+        margin-bottom: 26px;
+      }
+      .role-b.sp .rh {
+        color: var(--g);
+      }
+      .role-b.se .rh {
+        color: rgba(255, 255, 255, 0.95);
+      }
+      .ri {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 11px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .ri:last-child {
+        border-bottom: none;
+      }
+      .role-b.sp .ri {
+        color: #c8d8c3;
+      }
+      .role-b.se .ri {
+        color: rgba(255, 255, 255, 0.9);
+        border-bottom-color: rgba(255, 255, 255, 0.15);
+      }
+      .ri::before {
+        content: "→";
+        flex-shrink: 0;
+        font-size: 12px;
+        margin-top: 2px;
+      }
+      .role-b.sp .ri::before {
+        color: var(--g);
+      }
+      .role-b.se .ri::before {
+        color: rgba(255, 255, 255, 0.5);
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    6 · ESQUEMA COMERCIAL
 ───────────────────────────────── */
-#s6{background:var(--k2)}
-#s6 h2{
-  font-family:'Barlow Condensed',sans-serif;font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
-  margin-bottom:8px;
-}
-#s6 .sub{font-size:15px;color:var(--t4);margin-bottom:40px}
+      #s6 {
+        background: var(--k2);
+      }
+      #s6 h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(34px, 4.5vw, 56px);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        line-height: 1.05;
+        margin-bottom: 8px;
+      }
+      #s6 .sub {
+        font-size: 15px;
+        color: var(--t4);
+        margin-bottom: 40px;
+      }
 
-.com-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
-.com-cards{display:flex;flex-direction:column;gap:14px}
-.cc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:22px 24px}
-.cc-head{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:14px}
-.cc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px}
-.cc-row:last-child{border-bottom:none}
-.cc-lbl{color:var(--t4)}
-.cc-val{font-weight:600;color:var(--w)}
-.cc.liq{background:var(--glo);border-color:var(--glb)}
-.liq-steps{display:flex;flex-direction:column;gap:10px;margin-top:4px}
-.liq-step{display:flex;gap:14px;align-items:flex-start;font-size:13px;color:var(--t3)}
-.liq-n{width:24px;height:24px;border-radius:50%;background:var(--g);color:var(--w);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+      .com-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        align-items: start;
+      }
+      .com-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .cc {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 22px 24px;
+      }
+      .cc-head {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--g);
+        margin-bottom: 14px;
+      }
+      .cc-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 13px;
+      }
+      .cc-row:last-child {
+        border-bottom: none;
+      }
+      .cc-lbl {
+        color: var(--t4);
+      }
+      .cc-val {
+        font-weight: 600;
+        color: var(--w);
+      }
+      .cc.liq {
+        background: var(--glo);
+        border-color: var(--glb);
+      }
+      .liq-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .liq-step {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        font-size: 13px;
+        color: var(--t3);
+      }
+      .liq-n {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--g);
+        color: var(--w);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 800;
+        flex-shrink: 0;
+      }
 
-.prop-b{background:var(--g);border-radius:12px;padding:32px}
-.prop-b-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}
-.prop-b-body{font-size:14px;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:22px}
-.prop-feats{display:flex;flex-direction:column;gap:8px}
-.pf{font-size:13px;color:rgba(255,255,255,.8);display:flex;gap:10px;align-items:flex-start}
-.pf::before{content:'✓';color:rgba(255,255,255,.5);flex-shrink:0;margin-top:1px}
+      .prop-b {
+        background: var(--g);
+        border-radius: 12px;
+        padding: 32px;
+      }
+      .prop-b-title {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 10px;
+      }
+      .prop-b-body {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.75;
+        margin-bottom: 22px;
+      }
+      .prop-feats {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .pf {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .pf::before {
+        content: "✓";
+        color: rgba(255, 255, 255, 0.5);
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
 
-/* ─────────────────────────────────
+      /* ─────────────────────────────────
    7 · CIERRE PITCH
 ───────────────────────────────── */
-#s7{background:var(--k);overflow:hidden}
-#s7::before{
-  content:'';position:absolute;bottom:-20%;left:50%;transform:translateX(-50%);
-  width:80vw;height:80vw;max-width:800px;max-height:800px;
-  background:radial-gradient(ellipse,rgba(94,168,50,.09) 0%,transparent 62%);
-  pointer-events:none;
-}
-.close-inner{text-align:center;position:relative;z-index:1}
-.close-tag{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--g);margin-bottom:28px;
-}
-.close-tag::before,.close-tag::after{content:'';display:block;width:22px;height:2px;background:var(--g)}
+      #s7 {
+        background: var(--k);
+        overflow: hidden;
+      }
+      #s7::before {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80vw;
+        height: 80vw;
+        max-width: 800px;
+        max-height: 800px;
+        background: radial-gradient(
+          ellipse,
+          rgba(94, 168, 50, 0.09) 0%,
+          transparent 62%
+        );
+        pointer-events: none;
+      }
+      .close-inner {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      .close-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--g);
+        margin-bottom: 28px;
+      }
+      .close-tag::before,
+      .close-tag::after {
+        content: "";
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--g);
+      }
 
-.close-h{
-  font-family:'Barlow Condensed',sans-serif;font-weight:900;
-  font-size:clamp(42px,6.5vw,88px);
-  text-transform:uppercase;letter-spacing:-.02em;line-height:.95;
-  margin-bottom:24px;
-}
-.close-h em{color:var(--g);font-style:normal}
+      .close-h {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 800;
+        font-size: clamp(32px, 5.5vw, 88px);
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        line-height: 0.95;
+        margin-bottom: 24px;
+      }
+      .close-h em {
+        color: var(--g);
+        font-style: normal;
+      }
 
-.close-p{
-  font-size:17px;color:var(--t4);line-height:1.75;
-  max-width:760px;margin:0 auto 24px;
-}
-.close-p strong{color:var(--w)}
+      .close-p {
+        font-size: 17px;
+        color: var(--t4);
+        line-height: 1.75;
+        max-width: 760px;
+        margin: 0 auto 24px;
+      }
+      .close-p strong {
+        color: var(--w);
+      }
 
-.close-proof{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 auto 34px;max-width:760px}
-.close-proof span{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:10px 16px;border-radius:999px;
-  border:1px solid rgba(94,168,50,.28);background:rgba(94,168,50,.10);
-  color:var(--w);font-size:12px;font-weight:700;letter-spacing:.04em
-}
+      .close-proof {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 0 auto 34px;
+        max-width: 760px;
+      }
+      .close-proof span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(94, 168, 50, 0.28);
+        background: rgba(94, 168, 50, 0.1);
+        color: var(--w);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
 
-.close-bullets{
-  max-width:780px;margin:0 auto 42px;text-align:left;
-  display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;
-}
-.close-bullet{
-  display:flex;gap:12px;align-items:flex-start;
-  padding:16px 18px;border-radius:10px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.07);
-}
-.close-dot{
-  width:24px;height:24px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  background:rgba(94,168,50,.14);color:var(--g);
-  font-size:14px;font-weight:900;flex-shrink:0;margin-top:1px;
-}
-.close-bullet p{
-  font-size:14px;line-height:1.65;color:var(--t4);
-}
-.close-bullet strong{color:var(--w)}
+      .close-bullets {
+        max-width: 780px;
+        margin: 0 auto 42px;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 22px;
+      }
+      .close-bullet {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 16px 18px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .close-dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(94, 168, 50, 0.14);
+        color: var(--g);
+        font-size: 14px;
+        font-weight: 900;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .close-bullet p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--t4);
+      }
+      .close-bullet strong {
+        color: var(--w);
+      }
 
-.close-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
-.btn-p-lg{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--g);color:var(--w);text-decoration:none;
-  font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  padding:16px 36px;border-radius:3px;transition:background .18s,transform .15s;
-}
-.btn-p-lg:hover{background:var(--g2);transform:translateY(-1px)}
-.btn-gh{
-  display:inline-flex;align-items:center;gap:6px;
-  color:var(--t3);text-decoration:none;
-  font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  padding:16px 28px;border:1px solid rgba(255,255,255,.1);border-radius:3px;
-  transition:color .18s,border-color .18s,background .18s;
-}
-.btn-gh:hover{color:var(--w);border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04)}
+      .close-actions {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 56px;
+      }
+      .btn-p-lg {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--g);
+        color: var(--w);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 16px 36px;
+        border-radius: 3px;
+        transition:
+          background 0.18s,
+          transform 0.15s;
+      }
+      .btn-p-lg:hover {
+        background: var(--g2);
+        transform: translateY(-1px);
+      }
+      .btn-gh {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--t3);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 16px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        transition:
+          color 0.18s,
+          border-color 0.18s,
+          background 0.18s;
+      }
+      .btn-gh:hover {
+        color: var(--w);
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.04);
+      }
 
-.contact-chip{
-  font-size:12px;color:var(--t4);letter-spacing:.04em;
-}
-.contact-chip a{color:var(--g);text-decoration:none;font-weight:600}
-.contact-chip a:hover{text-decoration:underline}
+      .contact-chip {
+        font-size: 12px;
+        color: var(--t4);
+        letter-spacing: 0.04em;
+      }
+      .contact-chip a {
+        color: var(--g);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .contact-chip a:hover {
+        text-decoration: underline;
+      }
 
-.close-stamp{
-  position:absolute;bottom:32px;right:48px;
-  font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);opacity:.5;
-}
+      .close-stamp {
+        position: absolute;
+        bottom: 32px;
+        right: 48px;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--t4);
+        opacity: 0.5;
+      }
 
-/* ── FOOTER NAV ── */
-.fnav{
-  position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
-  display:flex;gap:4px;background:rgba(13,15,13,.92);border:1px solid rgba(255,255,255,.08);
-  border-radius:30px;padding:6px;backdrop-filter:blur(20px);z-index:100;
-}
-.fnav a{
-  font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--t4);text-decoration:none;padding:7px 14px;border-radius:24px;
-  transition:color .18s,background .18s;white-space:nowrap;
-}
-.fnav a:hover{color:var(--w);background:rgba(255,255,255,.07)}
-.fnav a.act{color:var(--w);background:rgba(94,168,50,.18);color:var(--g)}
+      /* ── FOOTER NAV ── */
+      .fnav {
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 4px;
+        background: rgba(13, 15, 13, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 6px;
+        backdrop-filter: blur(20px);
+        z-index: 100;
+      }
+      .fnav a {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--t4);
+        text-decoration: none;
+        padding: 7px 14px;
+        border-radius: 24px;
+        transition:
+          color 0.18s,
+          background 0.18s;
+        white-space: nowrap;
+      }
+      .fnav a:hover {
+        color: var(--w);
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .fnav a.act {
+        color: var(--w);
+        background: rgba(94, 168, 50, 0.18);
+        color: var(--g);
+      }
 
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  nav{padding:0 22px}
-  section{padding:80px 22px 60px}
-  .cv-layout,.roles,.com-grid,.pq-header,.close-bullets{grid-template-columns:1fr}
-  .pitch-grid{grid-template-columns:1fr 1fr}
-  .enfoque-grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:none}
-  .stat:nth-child(3){border-top:1px solid rgba(255,255,255,.07)}
-  .fnav{display:none}
-}
-</style>
-</head>
-<body>
-
-<!-- NAV PILL -->
-<div class="fnav" id="fnav">
-  <a href="#s1">Inicio</a>
-  <a href="#s2">Diferencial</a>
-  <a href="#s3">Modelo</a>
-  <a href="#s4">Enfoque</a>
-  <a href="#s5">Roles</a>
-  <a href="#s6">Comercial</a>
-  <a href="#s7">Sumáte</a>
-</div>
-
-<!-- TOP NAV -->
-<nav>
-  <div class="logo">Sporting <span>Market</span></div>
-  <a href="#s7" class="nav-cta">Quiero sumarme →</a>
-</nav>
-
-<!-- ═══════════ 1 · HERO ═══════════ -->
-<section id="s1">
-<div class="inner">
-  <div class="eyebrow r">Propuesta para Sellers · 2026</div>
-  <h1 class="hero-h1 r">
-    Sporting
-    <span>Market</span>
-    Place
-  </h1>
-  <p class="hero-claim r">
-    <strong>Vendé dentro del ecosistema deportivo más sólido de Argentina.</strong><br>
-    Canal especializado, audiencia activa y estructura lista para escalar desde el día uno.
-  </p>
-  <div class="hero-actions r">
-    <a href="#s7" class="btn-p">Quiero sumarme →</a>
-  </div>
-  <div class="stats r">
-    <div class="stat">
-      <div class="stat-n"><em>4,5</em>M</div>
-      <div class="stat-l">usuarios mensuales en la plataforma</div>
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        nav {
+          padding: 0 22px;
+        }
+        section {
+          padding: 80px 22px 60px;
+        }
+        .cv-layout,
+        .roles,
+        .com-grid,
+        .pq-header,
+        .close-bullets {
+          grid-template-columns: 1fr;
+        }
+        .pitch-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .enfoque-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stat:nth-child(2) {
+          border-right: none;
+        }
+        .stat:nth-child(3) {
+          border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .fnav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV PILL -->
+    <div class="fnav" id="fnav">
+      <a href="#s1">Inicio</a>
+      <a href="#s2">Diferencial</a>
+      <a href="#s3">Modelo</a>
+      <a href="#s4">Enfoque</a>
+      <a href="#s5">Roles</a>
+      <a href="#s6">Comercial</a>
+      <a href="#s7">Sumáte</a>
     </div>
-    <div class="stat">
-      <div class="stat-n"><em>40</em>K</div>
-      <div class="stat-l">pedidos mensuales procesados</div>
-    </div>
-    <div class="stat">
-      <div class="stat-n">+<em>500</em>K</div>
-      <div class="stat-l">clientes activos en el canal</div>
-    </div>
-  </div>
-</div>
-</section>
 
-<!-- ═══════════ 2 · POR QUÉ SPORTING ═══════════ -->
-<section id="s2">
-<div class="inner">
-  <div class="chip r">Por qué vender en Sporting</div>
-  <div class="pq-header">
-    <h2 class="r">El canal<br>correcto.</h2>
-    <p class="r">No se trata de sumar otro canal. Se trata de entrar en <strong>un ecosistema con audiencia, marca e infraestructura</strong> para crecer de forma más rápida y rentable en deporte y moda.</p>
-  </div>
-  <div class="pitch-grid">
-    <div class="pitch-card r">
-      <div class="pitch-ico">🏆</div>
-      <div class="pitch-title">Canal especializado en deporte</div>
-      <div class="pitch-body">Tu producto en un entorno 100% deportivo. Audiencia afín, contexto correcto, conversión superior.</div>
-    </div>
-    <div class="pitch-card r">
-      <div class="pitch-ico">📈</div>
-      <div class="pitch-title">Tráfico consolidado</div>
-      <div class="pitch-body">4,5M de usuarios activos al mes. No arrancás de cero — entrás a la demanda ya generada.</div>
-    </div>
-    <div class="pitch-card r">
-      <div class="pitch-ico">🥇</div>
-      <div class="pitch-title">Top 4 en deporte y calzado</div>
-      <div class="pitch-body">Empresa referente según Segmenta. Marca con credibilidad, reconocimiento y base de clientes activa.</div>
-    </div>
-    <div class="pitch-card r">
-      <div class="pitch-ico">👁️</div>
-      <div class="pitch-title">Visión 360 del cliente</div>
-      <div class="pitch-body">Datos, comportamiento y preferencias reales del consumidor deportivo. Información que potencia cada decisión.</div>
-    </div>
-    <div class="pitch-card r">
-      <div class="pitch-ico">⚙️</div>
-      <div class="pitch-title">Estructura lista para escalar</div>
-      <div class="pitch-body">Tecnología, checkout, pagos y atención al cliente ya construidos. Vos solo traés el producto.</div>
-    </div>
-    <div class="pitch-card r">
-      <div class="pitch-ico">🔥</div>
-      <div class="pitch-title">Pasión como ventaja</div>
-      <div class="pitch-body">Deporte y moda como ADN. Un equipo que entiende el mercado desde adentro y construye contigo.</div>
-    </div>
-  </div>
-</div>
-</section>
+    <!-- TOP NAV -->
+    <nav>
+      <div class="logo">Sporting <span>Market</span></div>
+      <a href="#s7" class="nav-cta">Quiero sumarme →</a>
+    </nav>
 
-
-
-<!-- ═══════════ 3 · CÍRCULO VIRTUOSO ═══════════ -->
-<section id="s3">
-<div class="inner">
-  <div class="cv-layout">
-    <div class="cv-text">
-      <div class="chip r">El modelo</div>
-      <h2 class="r">Un círculo<br>que crece<br>con vos.</h2>
-      <p class="r">Cada seller que se suma <strong>amplía la oferta</strong>, lo que genera mayor valor para el cliente, más tráfico y posicionamiento, y más valor para cada seller. <strong>Un ciclo que se potencia solo.</strong></p>
-    </div>
-    <div class="cv-graphic r">
-      <!-- SVG Círculo Virtuoso -->
-      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-        <defs>
-          <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L0,6 L8,3 z" fill="#5ea832"/>
-          </marker>
-          <filter id="shadow">
-            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,.3)"/>
-          </filter>
-        </defs>
-
-        <!-- Arrows (circle arcs) -->
-        <!-- Top arc: Ampliar oferta → Mayor valor cliente -->
-        <path d="M 155,100 A 110,110 0 0,1 265,100" stroke="#5ea832" stroke-width="2.5" fill="none" marker-end="url(#arr1)" opacity=".8"/>
-        <!-- Right arc: Mayor valor cliente → Tráfico -->
-        <path d="M 320,155 A 110,110 0 0,1 320,265" stroke="#5ea832" stroke-width="2.5" fill="none" marker-end="url(#arr1)" opacity=".8"/>
-        <!-- Bottom arc: Tráfico → Mayor valor seller -->
-        <path d="M 265,320 A 110,110 0 0,1 155,320" stroke="#5ea832" stroke-width="2.5" fill="none" marker-end="url(#arr1)" opacity=".8"/>
-        <!-- Left arc: Mayor valor seller → Ampliar oferta -->
-        <path d="M 100,265 A 110,110 0 0,1 100,155" stroke="#5ea832" stroke-width="2.5" fill="none" marker-end="url(#arr1)" opacity=".8"/>
-
-        <!-- Card: Ampliar oferta (top-left) -->
-        <rect x="30" y="40" width="150" height="90" rx="12" fill="#1e2420" filter="url(#shadow)"/>
-        <rect x="30" y="40" width="150" height="90" rx="12" fill="none" stroke="#5ea832" stroke-width="1.5" opacity=".5"/>
-        <text x="105" y="78" text-anchor="middle" fill="#5ea832" font-family="'Barlow Condensed',sans-serif" font-size="13" font-weight="700" letter-spacing="1" text-transform="uppercase">AMPLIAR</text>
-        <text x="105" y="96" text-anchor="middle" fill="#ffffff" font-family="'Barlow Condensed',sans-serif" font-size="18" font-weight="900" letter-spacing=".5">OFERTA</text>
-        <text x="105" y="116" text-anchor="middle" fill="#adbba7" font-family="'Barlow',sans-serif" font-size="11" font-weight="400">Más sellers, más productos</text>
-
-        <!-- Card: Mayor valor cliente (top-right) -->
-        <rect x="240" y="40" width="150" height="90" rx="12" fill="#1e2420" filter="url(#shadow)"/>
-        <rect x="240" y="40" width="150" height="90" rx="12" fill="none" stroke="#5ea832" stroke-width="1.5" opacity=".5"/>
-        <text x="315" y="68" text-anchor="middle" fill="#5ea832" font-family="'Barlow Condensed',sans-serif" font-size="13" font-weight="700" letter-spacing="1">MAYOR VALOR</text>
-        <text x="315" y="88" text-anchor="middle" fill="#ffffff" font-family="'Barlow Condensed',sans-serif" font-size="18" font-weight="900">CLIENTE</text>
-        <text x="315" y="108" text-anchor="middle" fill="#adbba7" font-family="'Barlow',sans-serif" font-size="11">Más opciones, mejor exp.</text>
-
-        <!-- Card: Tráfico + Posic. (bottom-right) -->
-        <rect x="240" y="290" width="150" height="90" rx="12" fill="#1e2420" filter="url(#shadow)"/>
-        <rect x="240" y="290" width="150" height="90" rx="12" fill="none" stroke="#5ea832" stroke-width="1.5" opacity=".5"/>
-        <text x="315" y="318" text-anchor="middle" fill="#5ea832" font-family="'Barlow Condensed',sans-serif" font-size="13" font-weight="700" letter-spacing="1">TRÁFICO</text>
-        <text x="315" y="338" text-anchor="middle" fill="#ffffff" font-family="'Barlow Condensed',sans-serif" font-size="18" font-weight="900">+ POSIC.</text>
-        <text x="315" y="358" text-anchor="middle" fill="#adbba7" font-family="'Barlow',sans-serif" font-size="11">Más visitas, mejor ranking</text>
-
-        <!-- Card: Mayor valor seller (bottom-left) -->
-        <rect x="30" y="290" width="150" height="90" rx="12" fill="#5ea832" filter="url(#shadow)"/>
-        <text x="105" y="318" text-anchor="middle" fill="rgba(255,255,255,.7)" font-family="'Barlow Condensed',sans-serif" font-size="13" font-weight="700" letter-spacing="1">MAYOR VALOR</text>
-        <text x="105" y="338" text-anchor="middle" fill="#ffffff" font-family="'Barlow Condensed',sans-serif" font-size="18" font-weight="900">SELLER</text>
-        <text x="105" y="358" text-anchor="middle" fill="rgba(255,255,255,.75)" font-family="'Barlow',sans-serif" font-size="11">Más ventas, más canal</text>
-
-        <!-- Center label -->
-        <text x="210" y="204" text-anchor="middle" fill="#5ea832" font-family="'Barlow Condensed',sans-serif" font-size="14" font-weight="800" letter-spacing="2" opacity=".6">SPORTING</text>
-        <text x="210" y="222" text-anchor="middle" fill="#6b7d66" font-family="'Barlow',sans-serif" font-size="11" font-weight="400" opacity=".8">Ecosistema deportivo</text>
-      </svg>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- ═══════════ 4 · NUESTRO ENFOQUE ═══════════ -->
-<section id="s4">
-<div class="inner">
-  <div class="chip r">Nuestro enfoque</div>
-  <h2 class="r">Especialistas en deporte.<br>Enfocados en lo que mejor funciona.</h2>
-  <div class="enfoque-grid r">
-    <div class="enf-cell">
-      <div class="enf-num">01</div>
-      <div>
-        <div class="enf-label">Audiencia enfocada</div>
-        <div class="enf-desc">No competís por atención en un universo infinito. Tu marca se presenta donde el cliente ya busca deporte y moda deportiva.</div>
-      </div>
-    </div>
-    <div class="enf-cell">
-      <div class="enf-num">02</div>
-      <div>
-        <div class="enf-label">Canal incremental</div>
-        <div class="enf-desc">No reemplaza tu tienda propia. La complementa con un canal más enfocado, más alineado con tu cliente real.</div>
-      </div>
-    </div>
-    <div class="enf-cell">
-      <div class="enf-num">03</div>
-      <div>
-        <div class="enf-label">Acompañamiento real</div>
-        <div class="enf-desc">Incorporación guiada, equipo dedicado y soporte desde el primer día. No llegás solo al canal.</div>
-      </div>
-    </div>
-    <div class="enf-cell">
-      <div class="enf-num">04</div>
-      <div>
-        <div class="enf-label">Modelo flexible</div>
-        <div class="enf-desc">La propuesta se construye en función de tu categoría, volumen y estructura real. Sin molde fijo.</div>
-      </div>
-    </div>
-  </div>
-  <div class="quote-bar r">
-    <p>"No se trata solo de estar en otro canal. Se trata de estar en el canal correcto."</p>
-  </div>
-</div>
-</section>
-
-<!-- ═══════════ 5 · ROLES ═══════════ -->
-<section id="s5">
-<div class="inner">
-  <div class="chip r">Rol de cada parte</div>
-  <h2 class="r">Simple y claro<br>desde el día uno.</h2>
-  <p class="sub r">Cada uno aporta lo que mejor sabe hacer. Así funciona el modelo.</p>
-  <div class="roles">
-    <div class="role-b sp r">
-      <div class="rh">Sporting Marketplace</div>
-      <div class="rh-s">Lo que Sporting aporta</div>
-      <div class="ri">Canal digital y plataforma tecnológica</div>
-      <div class="ri">Tráfico, visibilidad y posicionamiento</div>
-      <div class="ri">Checkout, pagos y seguridad de cobro</div>
-      <div class="ri">Atención al cliente y postventa</div>
-      <div class="ri">Liquidación mensual y conciliación</div>
-      <div class="ri">Soporte comercial y de integración</div>
-    </div>
-    <div class="role-b se r">
-      <div class="rh">El Seller</div>
-      <div class="rh-s">Lo que vos aportás</div>
-      <div class="ri">Productos, catálogo y stock</div>
-      <div class="ri">Política de precios y descuentos</div>
-      <div class="ri">Operación logística (propia o delegada)</div>
-      <div class="ri">Calidad del producto y la oferta</div>
-      <div class="ri">Cumplimiento de tiempos de despacho</div>
-      <div class="ri">Resolución de productos bajo garantía</div>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- ═══════════ 6 · ESQUEMA COMERCIAL ═══════════ -->
-<section id="s6">
-<div class="inner">
-  <div class="chip r">Esquema comercial</div>
-  <h2 class="r">Transparente,<br>sin sorpresas.</h2>
-  <p class="sub r">Comisión por venta, servicios opcionales y liquidación mensual. Todo claro desde el inicio.</p>
-  <div class="com-grid">
-    <div class="com-cards">
-      <div class="cc r">
-        <div class="cc-head">Cargos base — siempre aplican</div>
-        <div class="cc-row"><span class="cc-lbl">Comisión por venta</span><span class="cc-val">% sobre ventas</span></div>
-        <div class="cc-row"><span class="cc-lbl">Cargo por financiación en cuotas</span><span class="cc-val">% sobre ventas</span></div>
-      </div>
-      <div class="cc r">
-        <div class="cc-head">Servicios opcionales (solo si los activás)</div>
-        <div class="cc-row"><span class="cc-lbl">Logística directa</span><span class="cc-val">Por envío</span></div>
-        <div class="cc-row"><span class="cc-lbl">Logística inversa</span><span class="cc-val">Por devolución</span></div>
-        <div class="cc-row"><span class="cc-lbl">Fulfillment</span><span class="cc-val">Por pedido</span></div>
-        <div class="cc-row"><span class="cc-lbl">Catalogación</span><span class="cc-val">Por SKU</span></div>
-      </div>
-      <div class="cc liq r">
-        <div class="cc-head">¿Cuándo cobrás?</div>
-        <div class="liq-steps">
-          <div class="liq-step"><div class="liq-n">1</div><span>Hasta el 5° día hábil de cada mes recibís tus archivos de liquidación.</span></div>
-          <div class="liq-step"><div class="liq-n">2</div><span>Ventas, devoluciones y servicios del período, bien detallados.</span></div>
-          <div class="liq-step"><div class="liq-n">3</div><span>La transferencia es el neto: ventas menos los cargos del mes.</span></div>
+    <!-- ═══════════ 1 · HERO ═══════════ -->
+    <section id="s1">
+      <div class="inner">
+        <div class="eyebrow r">Propuesta para Sellers · 2026</div>
+        <h1 class="hero-h1 r">
+          Sporting
+          <span>Market</span>
+          Place
+        </h1>
+        <p class="hero-claim r">
+          <strong
+            >Vendé dentro del ecosistema deportivo más sólido de
+            Argentina.</strong
+          ><br />
+          Canal especializado, audiencia activa y estructura lista para escalar
+          desde el día uno.
+        </p>
+        <div class="hero-actions r">
+          <a href="#s7" class="btn-p">Quiero sumarme →</a>
+        </div>
+        <div class="stats r">
+          <div class="stat">
+            <div class="stat-n"><em>4,5</em>M</div>
+            <div class="stat-l">usuarios mensuales en la plataforma</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n"><em>40</em>K</div>
+            <div class="stat-l">pedidos mensuales procesados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">+<em>500</em>K</div>
+            <div class="stat-l">clientes activos en el canal</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="r">
-      <div class="prop-b">
-        <div class="prop-b-title">Propuesta a tu medida</div>
-        <div class="prop-b-body">La estructura se define según tu categoría, volumen y forma de operar. No hay un modelo único.</div>
-        <div class="prop-feats">
-          <div class="pf">Comisión según categoría y volumen proyectado</div>
-          <div class="pf">Tarifas de servicios definidas en el contrato</div>
-          <div class="pf">Condiciones revisables con el tiempo</div>
-          <div class="pf">Simulación económica orientativa incluida</div>
+    </section>
+
+    <!-- ═══════════ 2 · POR QUÉ SPORTING ═══════════ -->
+    <section id="s2">
+      <div class="inner">
+        <div class="chip r">Por qué vender en Sporting</div>
+        <div class="pq-header">
+          <h2 class="r">El canal<br />correcto.</h2>
+          <p class="r">
+            No se trata de sumar otro canal. Se trata de entrar en
+            <strong
+              >un ecosistema con audiencia, marca e infraestructura</strong
+            >
+            para crecer de forma más rápida y rentable en deporte y moda.
+          </p>
+        </div>
+        <div class="pitch-grid">
+          <div class="pitch-card r">
+            <div class="pitch-ico">🏆</div>
+            <div class="pitch-title">Canal especializado en deporte</div>
+            <div class="pitch-body">
+              Tu producto en un entorno 100% deportivo. Audiencia afín, contexto
+              correcto, conversión superior.
+            </div>
+          </div>
+          <div class="pitch-card r">
+            <div class="pitch-ico">📈</div>
+            <div class="pitch-title">Tráfico consolidado</div>
+            <div class="pitch-body">
+              4,5M de usuarios activos al mes. No arrancás de cero — entrás a la
+              demanda ya generada.
+            </div>
+          </div>
+          <div class="pitch-card r">
+            <div class="pitch-ico">🥇</div>
+            <div class="pitch-title">Top 4 en deporte y calzado</div>
+            <div class="pitch-body">
+              Empresa referente según Segmenta. Marca con credibilidad,
+              reconocimiento y base de clientes activa.
+            </div>
+          </div>
+          <div class="pitch-card r">
+            <div class="pitch-ico">👁️</div>
+            <div class="pitch-title">Visión 360 del cliente</div>
+            <div class="pitch-body">
+              Datos, comportamiento y preferencias reales del consumidor
+              deportivo. Información que potencia cada decisión.
+            </div>
+          </div>
+          <div class="pitch-card r">
+            <div class="pitch-ico">⚙️</div>
+            <div class="pitch-title">Estructura lista para escalar</div>
+            <div class="pitch-body">
+              Tecnología, checkout, pagos y atención al cliente ya construidos.
+              Vos solo traés el producto.
+            </div>
+          </div>
+          <div class="pitch-card r">
+            <div class="pitch-ico">🔥</div>
+            <div class="pitch-title">Pasión como ventaja</div>
+            <div class="pitch-body">
+              Deporte y moda como ADN. Un equipo que entiende el mercado desde
+              adentro y construye contigo.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</section>
+    </section>
 
-<!-- ═══════════ 7 · CIERRE / PITCH ═══════════ -->
-<section id="s7">
-<div class="inner">
-  <div class="close-inner">
-    <div class="close-tag r">¿Por qué sumarte a Sporting Marketplace?</div>
-    <h2 class="close-h r">No es sumar otro canal.<br><em>Es sumar crecimiento real.</em></h2>
-    <p class="close-p r">
-      Sporting Marketplace combina <strong>audiencia afín, marca posicionada e infraestructura lista para operar</strong> para que tu negocio pueda crecer dentro de un ecosistema deportivo ya consolidado.
-    </p>
+    <!-- ═══════════ 3 · CÍRCULO VIRTUOSO ═══════════ -->
+    <section id="s3">
+      <div class="inner">
+        <div class="cv-layout">
+          <div class="cv-text">
+            <div class="chip r">El modelo</div>
+            <h2 class="r">Un círculo<br />que crece<br />con vos.</h2>
+            <p class="r">
+              Cada seller que se suma <strong>amplía la oferta</strong>, lo que
+              genera mayor valor para el cliente, más tráfico y posicionamiento,
+              y más valor para cada seller.
+              <strong>Un ciclo que se potencia solo.</strong>
+            </p>
+          </div>
+          <div class="cv-graphic r">
+            <!-- SVG Círculo Virtuoso -->
+            <svg
+              viewBox="0 0 420 420"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 100%; height: auto"
+            >
+              <defs>
+                <marker
+                  id="arr1"
+                  markerWidth="8"
+                  markerHeight="8"
+                  refX="6"
+                  refY="3"
+                  orient="auto"
+                >
+                  <path d="M0,0 L0,6 L8,3 z" fill="#5ea832" />
+                </marker>
+                <filter id="shadow">
+                  <feDropShadow
+                    dx="0"
+                    dy="4"
+                    stdDeviation="8"
+                    flood-color="rgba(0,0,0,.3)"
+                  />
+                </filter>
+              </defs>
 
-    <div class="close-proof r">
-      <span>4,5M usuarios mensuales</span>
-      <span>40K pedidos mensuales</span>
-      <span>+500K clientes activos</span>
-    </div>
+              <!-- Arrows (circle arcs) -->
+              <!-- Top arc: Ampliar oferta → Mayor valor cliente -->
+              <path
+                d="M 155,100 A 110,110 0 0,1 265,100"
+                stroke="#5ea832"
+                stroke-width="2.5"
+                fill="none"
+                marker-end="url(#arr1)"
+                opacity=".8"
+              />
+              <!-- Right arc: Mayor valor cliente → Tráfico -->
+              <path
+                d="M 320,155 A 110,110 0 0,1 320,265"
+                stroke="#5ea832"
+                stroke-width="2.5"
+                fill="none"
+                marker-end="url(#arr1)"
+                opacity=".8"
+              />
+              <!-- Bottom arc: Tráfico → Mayor valor seller -->
+              <path
+                d="M 265,320 A 110,110 0 0,1 155,320"
+                stroke="#5ea832"
+                stroke-width="2.5"
+                fill="none"
+                marker-end="url(#arr1)"
+                opacity=".8"
+              />
+              <!-- Left arc: Mayor valor seller → Ampliar oferta -->
+              <path
+                d="M 100,265 A 110,110 0 0,1 100,155"
+                stroke="#5ea832"
+                stroke-width="2.5"
+                fill="none"
+                marker-end="url(#arr1)"
+                opacity=".8"
+              />
 
-    <div class="close-bullets r">
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Canal especializado en deporte</strong> con una audiencia alineada al tipo de producto que vendés.</p>
+              <!-- Card: Ampliar oferta (top-left) -->
+              <rect
+                x="30"
+                y="40"
+                width="150"
+                height="90"
+                rx="12"
+                fill="#1e2420"
+                filter="url(#shadow)"
+              />
+              <rect
+                x="30"
+                y="40"
+                width="150"
+                height="90"
+                rx="12"
+                fill="none"
+                stroke="#5ea832"
+                stroke-width="1.5"
+                opacity=".5"
+              />
+              <text
+                x="105"
+                y="78"
+                text-anchor="middle"
+                fill="#5ea832"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="13"
+                font-weight="700"
+                letter-spacing="1"
+                text-transform="uppercase"
+              >
+                AMPLIAR
+              </text>
+              <text
+                x="105"
+                y="96"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="18"
+                font-weight="900"
+                letter-spacing=".5"
+              >
+                OFERTA
+              </text>
+              <text
+                x="105"
+                y="116"
+                text-anchor="middle"
+                fill="#adbba7"
+                font-family="'Barlow',sans-serif"
+                font-size="11"
+                font-weight="400"
+              >
+                Más sellers, más productos
+              </text>
+
+              <!-- Card: Mayor valor cliente (top-right) -->
+              <rect
+                x="240"
+                y="40"
+                width="150"
+                height="90"
+                rx="12"
+                fill="#1e2420"
+                filter="url(#shadow)"
+              />
+              <rect
+                x="240"
+                y="40"
+                width="150"
+                height="90"
+                rx="12"
+                fill="none"
+                stroke="#5ea832"
+                stroke-width="1.5"
+                opacity=".5"
+              />
+              <text
+                x="315"
+                y="68"
+                text-anchor="middle"
+                fill="#5ea832"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="13"
+                font-weight="700"
+                letter-spacing="1"
+              >
+                MAYOR VALOR
+              </text>
+              <text
+                x="315"
+                y="88"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="18"
+                font-weight="900"
+              >
+                CLIENTE
+              </text>
+              <text
+                x="315"
+                y="108"
+                text-anchor="middle"
+                fill="#adbba7"
+                font-family="'Barlow',sans-serif"
+                font-size="11"
+              >
+                Más opciones, mejor exp.
+              </text>
+
+              <!-- Card: Tráfico + Posic. (bottom-right) -->
+              <rect
+                x="240"
+                y="290"
+                width="150"
+                height="90"
+                rx="12"
+                fill="#1e2420"
+                filter="url(#shadow)"
+              />
+              <rect
+                x="240"
+                y="290"
+                width="150"
+                height="90"
+                rx="12"
+                fill="none"
+                stroke="#5ea832"
+                stroke-width="1.5"
+                opacity=".5"
+              />
+              <text
+                x="315"
+                y="318"
+                text-anchor="middle"
+                fill="#5ea832"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="13"
+                font-weight="700"
+                letter-spacing="1"
+              >
+                TRÁFICO
+              </text>
+              <text
+                x="315"
+                y="338"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="18"
+                font-weight="900"
+              >
+                + POSIC.
+              </text>
+              <text
+                x="315"
+                y="358"
+                text-anchor="middle"
+                fill="#adbba7"
+                font-family="'Barlow',sans-serif"
+                font-size="11"
+              >
+                Más visitas, mejor ranking
+              </text>
+
+              <!-- Card: Mayor valor seller (bottom-left) -->
+              <rect
+                x="30"
+                y="290"
+                width="150"
+                height="90"
+                rx="12"
+                fill="#5ea832"
+                filter="url(#shadow)"
+              />
+              <text
+                x="105"
+                y="318"
+                text-anchor="middle"
+                fill="rgba(255,255,255,.7)"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="13"
+                font-weight="700"
+                letter-spacing="1"
+              >
+                MAYOR VALOR
+              </text>
+              <text
+                x="105"
+                y="338"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="18"
+                font-weight="900"
+              >
+                SELLER
+              </text>
+              <text
+                x="105"
+                y="358"
+                text-anchor="middle"
+                fill="rgba(255,255,255,.75)"
+                font-family="'Barlow',sans-serif"
+                font-size="11"
+              >
+                Más ventas, más canal
+              </text>
+
+              <!-- Center label -->
+              <text
+                x="210"
+                y="204"
+                text-anchor="middle"
+                fill="#5ea832"
+                font-family="'Barlow Condensed',sans-serif"
+                font-size="14"
+                font-weight="800"
+                letter-spacing="2"
+                opacity=".6"
+              >
+                SPORTING
+              </text>
+              <text
+                x="210"
+                y="222"
+                text-anchor="middle"
+                fill="#6b7d66"
+                font-family="'Barlow',sans-serif"
+                font-size="11"
+                font-weight="400"
+                opacity=".8"
+              >
+                Ecosistema deportivo
+              </text>
+            </svg>
+          </div>
+        </div>
       </div>
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Tráfico consolidado</strong> para entrar a una demanda ya existente, sin arrancar desde cero.</p>
-      </div>
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Marca con posicionamiento real</strong>, credibilidad y contexto comercial favorable para convertir.</p>
-      </div>
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Estructura lista para escalar</strong>: plataforma, checkout, pagos, atención al cliente y postventa.</p>
-      </div>
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Modelo flexible</strong> que se adapta a tu categoría, volumen y forma de operar.</p>
-      </div>
-      <div class="close-bullet">
-        <div class="close-dot">•</div>
-        <p><strong>Acompañamiento real</strong> desde la integración inicial hasta la operación cotidiana del canal.</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="close-actions r">
-      <a href="mailto:marketplace@sporting.com.ar" class="btn-p-lg">Quiero mi propuesta comercial →</a>
-      <a href="https://antonioluquin-ecomm.github.io/sporting-marketplace/" class="btn-gh">Ver presentación completa ↗</a>
-    </div>
+    <!-- ═══════════ 4 · NUESTRO ENFOQUE ═══════════ -->
+    <section id="s4">
+      <div class="inner">
+        <div class="chip r">Nuestro enfoque</div>
+        <h2 class="r">
+          Especialistas en deporte.<br />Enfocados en lo que mejor funciona.
+        </h2>
+        <div class="enfoque-grid r">
+          <div class="enf-cell">
+            <div class="enf-num">01</div>
+            <div>
+              <div class="enf-label">Audiencia enfocada</div>
+              <div class="enf-desc">
+                No competís por atención en un universo infinito. Tu marca se
+                presenta donde el cliente ya busca deporte y moda deportiva.
+              </div>
+            </div>
+          </div>
+          <div class="enf-cell">
+            <div class="enf-num">02</div>
+            <div>
+              <div class="enf-label">Canal incremental</div>
+              <div class="enf-desc">
+                No reemplaza tu tienda propia. La complementa con un canal más
+                enfocado, más alineado con tu cliente real.
+              </div>
+            </div>
+          </div>
+          <div class="enf-cell">
+            <div class="enf-num">03</div>
+            <div>
+              <div class="enf-label">Acompañamiento real</div>
+              <div class="enf-desc">
+                Incorporación guiada, equipo dedicado y soporte desde el primer
+                día. No llegás solo al canal.
+              </div>
+            </div>
+          </div>
+          <div class="enf-cell">
+            <div class="enf-num">04</div>
+            <div>
+              <div class="enf-label">Modelo flexible</div>
+              <div class="enf-desc">
+                La propuesta se construye en función de tu categoría, volumen y
+                estructura real. Sin molde fijo.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quote-bar r">
+          <p>
+            "No se trata solo de estar en otro canal. Se trata de estar en el
+            canal correcto."
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <div class="contact-chip r">
-      Escribinos directamente a <a href="mailto:marketplace@sporting.com.ar">marketplace@sporting.com.ar</a>
-    </div>
-  </div>
-</div>
-<div class="close-stamp">Sporting Marketplace · Sellers · 2026 · Confidencial</div>
-</section>
+    <!-- ═══════════ 5 · ROLES ═══════════ -->
+    <section id="s5">
+      <div class="inner">
+        <div class="chip r">Rol de cada parte</div>
+        <h2 class="r">Simple y claro<br />desde el día uno.</h2>
+        <p class="sub r">
+          Cada uno aporta lo que mejor sabe hacer. Así funciona el modelo.
+        </p>
+        <div class="roles">
+          <div class="role-b sp r">
+            <div class="rh">Sporting Marketplace</div>
+            <div class="rh-s">Lo que Sporting aporta</div>
+            <div class="ri">Canal digital y plataforma tecnológica</div>
+            <div class="ri">Tráfico, visibilidad y posicionamiento</div>
+            <div class="ri">Checkout, pagos y seguridad de cobro</div>
+            <div class="ri">Atención al cliente y postventa</div>
+            <div class="ri">Liquidación mensual y conciliación</div>
+            <div class="ri">Soporte comercial y de integración</div>
+          </div>
+          <div class="role-b se r">
+            <div class="rh">El Seller</div>
+            <div class="rh-s">Lo que vos aportás</div>
+            <div class="ri">Productos, catálogo y stock</div>
+            <div class="ri">Política de precios y descuentos</div>
+            <div class="ri">Operación logística (propia o delegada)</div>
+            <div class="ri">Calidad del producto y la oferta</div>
+            <div class="ri">Cumplimiento de tiempos de despacho</div>
+            <div class="ri">Resolución de productos bajo garantía</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-// Scroll reveal
-const ro = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('v'), i * 60);
-      ro.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.r').forEach(el => ro.observe(el));
+    <!-- ═══════════ 6 · ESQUEMA COMERCIAL ═══════════ -->
+    <section id="s6">
+      <div class="inner">
+        <div class="chip r">Esquema comercial</div>
+        <h2 class="r">Transparente,<br />sin sorpresas.</h2>
+        <p class="sub r">
+          Comisión por venta, servicios opcionales y liquidación mensual. Todo
+          claro desde el inicio.
+        </p>
+        <div class="com-grid">
+          <div class="com-cards">
+            <div class="cc r">
+              <div class="cc-head">Cargos base — siempre aplican</div>
+              <div class="cc-row">
+                <span class="cc-lbl">Comisión por venta</span
+                ><span class="cc-val">% sobre ventas</span>
+              </div>
+              <div class="cc-row">
+                <span class="cc-lbl">Cargo por financiación en cuotas</span
+                ><span class="cc-val">% sobre ventas</span>
+              </div>
+            </div>
+            <div class="cc r">
+              <div class="cc-head">
+                Servicios opcionales (solo si los activás)
+              </div>
+              <div class="cc-row">
+                <span class="cc-lbl">Logística directa</span
+                ><span class="cc-val">Por envío</span>
+              </div>
+              <div class="cc-row">
+                <span class="cc-lbl">Logística inversa</span
+                ><span class="cc-val">Por devolución</span>
+              </div>
+              <div class="cc-row">
+                <span class="cc-lbl">Fulfillment</span
+                ><span class="cc-val">Por pedido</span>
+              </div>
+              <div class="cc-row">
+                <span class="cc-lbl">Catalogación</span
+                ><span class="cc-val">Por SKU</span>
+              </div>
+            </div>
+            <div class="cc liq r">
+              <div class="cc-head">¿Cuándo cobrás?</div>
+              <div class="liq-steps">
+                <div class="liq-step">
+                  <div class="liq-n">1</div>
+                  <span
+                    >Hasta el 5° día hábil de cada mes recibís tus archivos de
+                    liquidación.</span
+                  >
+                </div>
+                <div class="liq-step">
+                  <div class="liq-n">2</div>
+                  <span
+                    >Ventas, devoluciones y servicios del período, bien
+                    detallados.</span
+                  >
+                </div>
+                <div class="liq-step">
+                  <div class="liq-n">3</div>
+                  <span
+                    >La transferencia es el neto: ventas menos los cargos del
+                    mes.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="prop-b">
+              <div class="prop-b-title">Propuesta a tu medida</div>
+              <div class="prop-b-body">
+                La estructura se define según tu categoría, volumen y forma de
+                operar. No hay un modelo único.
+              </div>
+              <div class="prop-feats">
+                <div class="pf">
+                  Comisión según categoría y volumen proyectado
+                </div>
+                <div class="pf">
+                  Tarifas de servicios definidas en el contrato
+                </div>
+                <div class="pf">Condiciones revisables con el tiempo</div>
+                <div class="pf">Simulación económica orientativa incluida</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-// Nav pill active
-const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.fnav a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-  navLinks.forEach(a => a.classList.toggle('act', a.getAttribute('href') === '#' + cur));
-}, { passive: true });
-</script>
-</body>
+    <!-- ═══════════ 7 · CIERRE / PITCH ═══════════ -->
+    <section id="s7">
+      <div class="inner">
+        <div class="close-inner">
+          <div class="close-tag r">
+            ¿Por qué sumarte a Sporting Marketplace?
+          </div>
+          <h2 class="close-h r">
+            El lugar correcto para hacer<br /><em>crecer tu marca.</em>
+          </h2>
+
+          <div class="close-proof r">
+            <span>4,5M usuarios mensuales</span>
+            <span>40K pedidos mensuales</span>
+            <span>+500K clientes activos</span>
+          </div>
+
+          <div class="close-bullets r">
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Canal especializado en deporte</strong> con una
+                audiencia alineada al tipo de producto que vendés.
+              </p>
+            </div>
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Tráfico consolidado</strong> para entrar a una demanda
+                ya existente, sin arrancar desde cero.
+              </p>
+            </div>
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Marca con posicionamiento real</strong>, credibilidad y
+                contexto comercial favorable para convertir.
+              </p>
+            </div>
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Estructura lista para escalar</strong>: plataforma,
+                checkout, pagos, atención al cliente y postventa.
+              </p>
+            </div>
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Modelo flexible</strong> que se adapta a tu categoría,
+                volumen y forma de operar.
+              </p>
+            </div>
+            <div class="close-bullet">
+              <div class="close-dot">•</div>
+              <p>
+                <strong>Acompañamiento real</strong> desde la integración
+                inicial hasta la operación cotidiana del canal.
+              </p>
+            </div>
+          </div>
+
+          <div class="close-actions r">
+            <a href="mailto:marketplace@sporting.com.ar" class="btn-p-lg"
+              >Quiero mi propuesta comercial →</a
+            >
+            <a
+              href="https://antonioluquin-ecomm.github.io/sporting-marketplace/"
+              class="btn-gh"
+              >Ver presentación completa ↗</a
+            >
+          </div>
+
+          <div class="contact-chip r">
+            Escribinos directamente a
+            <a href="mailto:marketplace@sporting.com.ar"
+              >marketplace@sporting.com.ar</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="close-stamp">
+        Sporting Marketplace · Sellers · 2026 · Confidencial
+      </div>
+    </section>
+
+    <script>
+      // Scroll reveal
+      const ro = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("v"), i * 60);
+              ro.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 },
+      );
+      document.querySelectorAll(".r").forEach((el) => ro.observe(el));
+
+      // Nav pill active
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".fnav a");
+      window.addEventListener(
+        "scroll",
+        () => {
+          let cur = "";
+          sections.forEach((s) => {
+            if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+          });
+          navLinks.forEach((a) =>
+            a.classList.toggle("act", a.getAttribute("href") === "#" + cur),
+          );
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
 </html>
